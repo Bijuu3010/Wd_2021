@@ -29,6 +29,6 @@ n = int(input("Podaj n-ty element ciągu :"))
 ciag = CiagArytmetyczny()
 
 ciag.pobierz_parametry(a1,r,n)
-ciag.pobierz_elementy()
+ciag.policz_elementy()
 ciag.policz_sume()
 ciag.wyswietl_dane()
