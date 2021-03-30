@@ -1,0 +1,1 @@
+Dodanie do pliku tekstu
