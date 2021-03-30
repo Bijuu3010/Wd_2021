@@ -1,34 +1,44 @@
 class CiagArytmetyczny:
-
+    an = {}
     def pobierz_parametry(self, a1, r, n):
         self.a1 = a1
         self.r = r
         self.n = n
+    def pobierz_elementy(self, index, wartosc):
+        self.an[index] = wartosc
 
     def wyswietl_dane(self):
-        print(f'a1 = {self.a1}')
-        print(f'r = {self.r}')
-        print(f'n = {self.n}')
-        print(f'an = {self.an}')
-        print(f'suma = {self.suma}')   
-
-    def policz_elementy(self):   
-        self.an =  a1 + (n - 1) * r
+        wynik = self.a1
+        for i in range(1,self.n + 1):
+            print(f'a({i}) = {wynik}')
+            wynik += self.r
+        
+    def policz_elementy(self): 
+        for i in range(1,self.n + 1):
+            self.an[i] =  self.a1 + (i - 1) * self.r 
         return self.an
 
     def policz_sume(self):
-        self.suma = ((a1 + self.an ) / 2) * n
-        return self.suma
+        suma = 0
+        # self.suma = ((self.a1 + self.an ) / 2) * self.n
+        for i in self.an:
+            suma += self.an[i]
+        return f'wynik sumy {suma}'
     
-    # def pobierz_elementy(self):   ####????
-    
-a1 = int(input("Podaj wartość a1 :"))
-r = int(input("Podaj różnicę r :"))
-n = int(input("Podaj n-ty element ciągu :"))
+# a1 = int(input("Podaj wartość a1 :"))
+# r = int(input("Podaj różnicę r :"))
+# n = int(input("Podaj n-ty element ciągu :"))
 
 ciag = CiagArytmetyczny()
 
-ciag.pobierz_parametry(a1,r,n)
+ciag.pobierz_elementy(1,1)
+ciag.pobierz_elementy(3,3)
+ciag.pobierz_elementy(2,2)
+ciag.policz_sume()
+print(ciag.policz_sume())
+
+ciag.pobierz_parametry(1, 1, 10)
+ciag.wyswietl_dane()
 ciag.policz_elementy()
 ciag.policz_sume()
-ciag.wyswietl_dane()
+print(ciag.policz_sume())
