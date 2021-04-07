@@ -1,9 +1,13 @@
 class Samogloski:
     
     def __init__(self, tekst):
-        self.tekst = tekst
-        self.index = 0
-        self.baza = ['a', 'c']
+        # isinstance sprawdza polimorficznie subklasy
+        if isinstance(tekst, str):
+            self.tekst = tekst
+            self.index = 0
+            self.baza = ['ą', 'c']
+        else:
+            raise TypeError("input must be a string")
     def __iter__(self):
         return self
     
