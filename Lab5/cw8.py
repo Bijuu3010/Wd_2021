@@ -15,7 +15,7 @@ class Samogloski:
     def __next__(self):
         if self.index > len(self.tekst):
             raise StopIteration
-        for i in range(len(self.baza)):
+        for index in range(len(self.tekst)):
             if self.tekst[self.index] in self.baza:
                 retrun (self.tekst[self.index])
 
