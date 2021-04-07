@@ -17,19 +17,14 @@ class Samogloski:
             raise StopIteration
         for index in range(len(self.tekst)):
             if self.tekst[self.index] in self.baza:
-                retrun (self.tekst[self.index])
+                print(self.tekst[self.index])
+            self.index += 1
 
 test = Samogloski('alą mę i yotu')
+# print(next(test))
+# print(next(test))
 print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
-print(next(test))
+
     
 
     
